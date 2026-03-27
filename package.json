@@ -1,0 +1,50 @@
+{
+  "name": "claimgraph",
+  "version": "0.1.0",
+  "description": "Claims-backed knowledge graph memory for AI agents. Usable as a library, HTTP server, or MCP tool server.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "claimgraph-serve": "dist/bin/serve.js",
+    "claimgraph-mcp": "dist/bin/mcp.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "serve": "tsx src/bin/serve.ts",
+    "mcp": "tsx src/bin/mcp.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sourdusk/claimgraph.git"
+  },
+  "license": "AGPL-3.0-only",
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "memory",
+    "knowledge-graph",
+    "surrealdb",
+    "mcp",
+    "ai-agent",
+    "llm"
+  ],
+  "dependencies": {
+    "openai": "^6.33.0",
+    "surrealdb": "^2.0.3",
+    "uuid": "^13.0.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "@types/uuid": "^10.0.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.2"
+  }
+}
