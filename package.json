@@ -10,6 +10,7 @@
     "claimgraph-mcp": "dist/bin/mcp.js"
   },
   "scripts": {
+    "prepare": "npm run build",
     "build": "tsc",
     "dev": "tsc --watch",
     "serve": "tsx src/bin/serve.ts",
